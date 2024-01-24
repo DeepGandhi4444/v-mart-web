@@ -11,10 +11,12 @@
   user-select: none !important;
   /* overflow-:hidden ; */
 }
-html{
+
+html {
   overflow-x: hidden;
   height: calc(100vh+65px);
 }
+
 header {
   position: sticky;
   top: 0;
@@ -66,7 +68,7 @@ nav {
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius:5px 0px 0px 5px;
+  border-radius: 5px 0px 0px 5px;
   margin-left: 3px;
   margin-bottom: 3px;
 }
@@ -125,16 +127,16 @@ nav {
   flex-wrap: wrap;
 }
 
-.displaycategory {
+.displaycard {
   border: 1px solid #1c1f6e;
   padding: 5px;
   margin: 5px;
   border-radius: 6px;
   background-color: #e8faff;
-  width: max-content;
+  width: 150px;
 }
 
-.displaycategory img {
+.displaycard img {
   border-right: 2px solid #1c1f6e;
   margin-right: 5px;
   padding-right: 5px;
@@ -193,7 +195,7 @@ nav {
   color: rgb(84, 82, 82);
   width: 100%;
   padding-top: 6px;
-  border-top:1px solid darkgrey;
+  border-top: 1px solid darkgrey;
   word-wrap: break-word !important;
 
 }
@@ -202,7 +204,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
   width: 100%;
   transition: all ease 0.3s;
   text-align: center;
@@ -213,10 +215,12 @@ nav {
   cursor: pointer;
   color: #27977b;
 }
+
 .Customfooter div p {
-  font-size:large;
+  font-size: large;
 }
-.footer-text{
+
+.footer-text {
   font-size: small;
 }
 
@@ -237,7 +241,7 @@ nav {
 .slick-slide img {
   width: 100%;
   height: 200px;
- 
+
 }
 
 .slick-dots {
@@ -278,8 +282,62 @@ nav {
 
 
 
+.products-dropdown {
+  display: block;
+}
+
+.products-dropdown .dropdown-default {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 18px 0px 16px;
+}
+
+.products-dropdown .dropdown-body {
+  /* transform: translate(0%, -150%); */
+  height: 0px;
+  /* position: absolute; */
+  transition: all ease 0.3s;
+  overflow-y: hidden;
+  z-index: -6;
+}
+
+.products-dropdown .dropdown-body-open {
+  /* transform: translate(0%, 0%); */
+  height: 390px;
+  transition: all ease 0.3s;
+ 
+}
+
+.rotate180 {
+  transition: transform ease 0.2s;
+  transform: rotate(180deg);
+}
+
+
+
+
+
+.product-line{
+  display: flex;
+  overflow-y: scroll;
+
+}
+.product-line-container h5{
+ margin-left: 10px;
+ /* border-bottom: 1px solid darkgrey; */
+}
+ .product{
+  width: 150px;
+}
+
+.product-line span{
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+
 
 /* impportant do not remove it  */
-.morespace{
+.morespace {
   height: 65px;
 }

@@ -19,8 +19,6 @@ const CustomSlider = ({ items }) => {
        {items.map((item) => (
          <div key={item.id}>
            <img src={item.src} alt={item.alt} />
-           {/* <h3>{item.title}</h3>
-           <p>{item.description}</p> */}
          </div>
        ))}
      </Slider>

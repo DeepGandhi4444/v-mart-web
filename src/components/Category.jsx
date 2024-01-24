@@ -25,7 +25,7 @@ return(
     <span className="badge badge-primary badge-pill">14</span>
   </li>
   <li className="list-group-item d-flex justify-content-between align-items-center">
-  <Link className="link-hover" to="/">Beuaty and Hygine </Link>
+  <Link className="link-hover" to="/">Beauty and Hygine </Link>
     <span className="badge badge-primary badge-pill">14</span>
   </li>
   <li className="list-group-item d-flex justify-content-between align-items-center">
