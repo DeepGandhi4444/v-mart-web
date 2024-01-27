@@ -7,19 +7,25 @@ import Displaycard from "../components/Displaycard"
 var sliderItems = [
   {
   id: 1,
-  src: 'assets/images/banner2.jpg',
+  src: 'assets/images/img1.jpg',
   alt: 'Image 2',
   title: '',
   description: '',
   },
   {
   id: 2,
-  src: 'assets/images/banner2.jpg',
+  src: 'assets/images/img2.jpg',
   alt: 'Image 2',
   title: '',
   description: '',
   },
-  // Add more items as needed
+  {
+    id: 2,
+    src: 'assets/images/img3.jpg',
+    alt: 'Image 2',
+    title: '',
+    description: '',
+    }
   ];
 
   const vegetable = [
