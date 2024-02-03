@@ -1,7 +1,15 @@
 import { Link } from "react-router-dom";
 import Sidebar from "./Sidenav";
 import React, { useState } from "react";
+
+
 // import Basket from "./Basket";
+
+
+
+
+
+
 function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
@@ -12,7 +20,7 @@ function Navbar() {
     <>
       <header className="fixed-top">
         {/* navbar starts here  */}
-        <nav >
+        <nav>
           {/* left part here */}
           <div className="left-nav" onClick={openSidebar}>
             <i className="fa-solid fa-bars "></i>
@@ -34,16 +42,7 @@ function Navbar() {
 
         {/* search bar is here */}
 
-        <div className="search-bar">
-          <input
-            type="search"
-            id="search-input"
-            placeholder="Search for products..."
-          />
-          <button type="submit" id="search-button">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
+       
 
         {/*basket compenent is here  */}
         {/* <Basket count="6" /> */}

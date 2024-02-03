@@ -30,7 +30,7 @@ function Footer(props) {
         <i class="fa-solid fa-basket-shopping"></i>
           <br />
           <span className="footer-text">Basket</span>
-          <span className={`item-count ${props.count==0 ? "d-none": ""}`}> {props.count}</span>
+          <span className={`item-count ${props.count===0 ? "d-none": ""}`}> {props.count}</span>
         </p>
         </Link>
       </div>

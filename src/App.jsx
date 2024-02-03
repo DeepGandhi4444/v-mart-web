@@ -5,6 +5,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Products from './routes/Products';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
+import Search from './routes/Search';
 function App() {
   return (
     
@@ -13,6 +14,7 @@ function App() {
     <Routes>
       <Route index element={<Home/>} />
       <Route path='products' element={<Products/>} />
+      <Route path='search' element={<Search/>} />
     </Routes>
     <Footer count="1"/>
     </BrowserRouter>
