@@ -2,9 +2,35 @@ import React, { useState } from "react";
 
 // import { Link } from "react-router-dom";
 import Category from "../components/Category";
+import  Hit  from "../components/Hit";
 
 
-
+var temp = [
+  {
+    "name": "apple",
+    "synonyms": ["fruit", "red fruit", "edible fruit"]
+  },
+  {
+    "name": "banana",
+    "synonyms": ["yellow fruit", "tropical fruit", "curved fruit"]
+  },
+  {
+    "name": "bread",
+    "synonyms": ["loaf", "sliced bread", "baked goods"]
+  },
+  {
+    "name": "milk",
+    "synonyms": ["dairy", "fresh milk", "cow's milk"]
+  },
+  {
+    "name": "eggs",
+    "synonyms": ["chicken eggs", "white eggs", "protein"]
+  },
+  {
+    "name": "rice",
+    "synonyms": ["grains", "white rice", "staple"]
+  }
+];
 
 const Products = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -55,7 +81,7 @@ const Products = () => {
               <hr />
                 <h5>Fruits and Vegetables</h5>
               <div className="product-line">
-
+                <Hit items={temp}/>
                 <span> more... </span>
               </div>
             </div>
