@@ -5,7 +5,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Products from './routes/Products';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
-import Search from './routes/Search';
+import Search from './components/Search';
 function App() {
   return (
     

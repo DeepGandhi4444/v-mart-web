@@ -1,0 +1,29 @@
+{
+    "groceries": [
+      {
+        "name": "apple",
+        "synonyms": ["fruit", "red fruit", "edible fruit"]
+      },
+      {
+        "name": "banana",
+        "synonyms": ["yellow fruit", "tropical fruit", "curved fruit"]
+      },
+      {
+        "name": "bread",
+        "synonyms": ["loaf", "sliced bread", "baked goods"]
+      },
+      {
+        "name": "milk",
+        "synonyms": ["dairy", "fresh milk", "cow's milk"]
+      },
+      {
+        "name": "eggs",
+        "synonyms": ["chicken eggs", "white eggs", "protein"]
+      },
+      {
+        "name": "rice",
+        "synonyms": ["grains", "white rice", "staple"]
+      }
+    ]
+  }
+  

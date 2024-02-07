@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Highlight } from "react-instantsearch";
+
 const Hit = ({ hit }) => {
   return (
     <>
@@ -11,17 +11,7 @@ const Hit = ({ hit }) => {
             alt="product"
             className="left-part"
           />
-          
-            <Highlight
-              attribute="title"
-              hit={hit}
-              classNames={{
-                root: "right-part",
-                highlighted: "inline",
-                nonHighlighted:"inline",
-                separator:"",
-              }}
-            />
+          <div className="right-part">{hit.title}</div>
          
         </div>
       </Link>
