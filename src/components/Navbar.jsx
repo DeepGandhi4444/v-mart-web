@@ -48,7 +48,7 @@ function Navbar() {
           </div>
 
           {/* right part here */}
-          <div className="right-nav profile ">
+          <div className="text-black rounded-[50%] border-1 border-black w-[30px] h-[30px] text-center">
             <i class="fa-regular fa-user"></i>
           </div>
         </nav>

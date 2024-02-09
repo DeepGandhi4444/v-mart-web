@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-function Footer(props) {
+import { useGlobalData } from "../AppContext";
+function Footer() {
+  const {basketcount} = useGlobalData();
   return (
     <div className="Customfooter">
       <div className="first">
@@ -29,13 +31,15 @@ function Footer(props) {
         <p>
         <i class="fa-solid fa-basket-shopping"></i>
           <br />
-          <span className="footer-text">Basket</span>
-          <span className={`item-count ${props.count===0 ? "d-none": ""}`}> {props.count}</span>
+          <span className="footer-text ">Basket</span>
+          <span className={`item-count ${basketcount === 0 ? "d-none": ""}`}> {basketcount}</span>
         </p>
         </Link>
       </div>
     </div>
   );
 }
+
+
 
 export default Footer;

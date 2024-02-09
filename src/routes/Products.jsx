@@ -1,123 +1,113 @@
-import React, { useState } from "react";
+import React from "react";
 
 // import { Link } from "react-router-dom";
-import Category from "../components/Category";
-import  Hit  from "../components/Hit";
+// import Category from "../components/Category";
+import Hit from "../components/Hit";
+import { useGlobalData } from "../AppContext";
 
 
-var temp = [
-  {
-    "name": "apple",
-    "synonyms": ["fruit", "red fruit", "edible fruit"]
-  },
-  {
-    "name": "banana",
-    "synonyms": ["yellow fruit", "tropical fruit", "curved fruit"]
-  },
-  {
-    "name": "bread",
-    "synonyms": ["loaf", "sliced bread", "baked goods"]
-  },
-  {
-    "name": "milk",
-    "synonyms": ["dairy", "fresh milk", "cow's milk"]
-  },
-  {
-    "name": "eggs",
-    "synonyms": ["chicken eggs", "white eggs", "protein"]
-  },
-  {
-    "name": "rice",
-    "synonyms": ["grains", "white rice", "staple"]
-  }
-];
+// var temp = [
+//   {
+//     name: "apple",
+//     synonyms: ["fruit", "red fruit", "edible fruit"],
+//   },
+//   {
+//     name: "banana",
+//     synonyms: ["yellow fruit", "tropical fruit", "curved fruit"],
+//   },
+//   {
+//     name: "bread",
+//     synonyms: ["loaf", "sliced bread", "baked goods"],
+//   },
+//   {
+//     name: "milk",
+//     synonyms: ["dairy", "fresh milk", "cow's milk"],
+//   },
+//   {
+//     name: "eggs",
+//     synonyms: ["chicken eggs", "white eggs", "protein"],
+//   },
+//   {
+//     name: "rice",
+//     synonyms: ["grains", "white rice", "staple"],
+//   },
+// ];
 
 const Products = () => {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-
-  const openAndclose = () => {
-    isDropdownOpen ? setDropdownOpen(false) : setDropdownOpen(true);
-  };
+  
+  const {globalapi} =useGlobalData();
+  const items = Object.entries(globalapi);
   return (
     <>
-      <div className="productsPageHeader 
-      products-dropdown">
-        <div className="dropdown-default">
-          Choose Category
-          <button>
-            <i
-              className={`fa-solid fa-chevron-down ${
-                isDropdownOpen ? "rotate180 " : ""
-              } `}
-              onClick={openAndclose}
-            ></i>
-          </button>
-        </div>
-        <hr />
-        <div
-          className={`dropdown-body ${
-            isDropdownOpen ? "dropdown-body-open" : ""
-          }`}
-        >
-          <Category />
-        </div>
-      </div>
-
       <main>
         <div>
-          <h4
-            className="text-center"
+          <h3
+            className="text-center text-title"
             style={{
-              borderTop: "1px solid grey",
               paddingTop: "10px",
               marginTop: "20px",
               paddingBottom: "0px",
             }}
           >
             Products
-          </h4>
+          </h3>
           <div className="textbar"></div>
-            <div className="product-line-container">
-              <hr />
-                <h5>Fruits and Vegetables</h5>
-              <div className="product-line">
-                <Hit items={temp}/>
-                <span> more... </span>
-              </div>
+          <div className="product-line-container">
+            <hr />
+            <h5 className="text-title">Fruits and Vegetables</h5>
+            <div className="product-line">
+              <Hit items={items} />
+              <span className=" card justify-content-center text-center text-title">
+              
+                more...
+              </span>
             </div>
+          </div>
 
-            <div className="product-line-container">
-              <hr />
-                <h5>FoodGrains, Oils, and Masala</h5>
-              <div className="product-line">
-
-                <span> more... </span>
-              </div>
+          <div className="product-line-container">
+            <hr />
+            <h5 className="text-title">FoodGrains, Oils, and Masala</h5>
+            <div className="product-line">
+              <Hit items={items} />
+              <span className="card justify-content-center text-center text-title">
+                
+                more...
+              </span>
             </div>
-            <div className="product-line-container">
-              <hr />
-                <h5>Bakery, Cakes, and Dairy </h5>
-              <div className="product-line">
-
-                <span> more... </span>
-              </div>
+          </div>
+          <div className="product-line-container">
+            <hr />
+            <h5 className="text-title">Bakery, Cakes, and Dairy </h5>
+            <div className="product-line">
+              <Hit items={items} />
+              <span className="card justify-content-center text-center text-title">
+                
+                more...
+              </span>
             </div>
-            <div className="product-line-container">
-              <hr />
-                <h5>Beverages</h5>
-              <div className="product-line">
-
-                <span> more... </span>
-              </div>
+          </div>
+          <div className="product-line-container">
+            <hr />
+            <h5 className="text-title">Beverages</h5>
+            <div className="product-line">
+              <Hit items={items} />
+              <span className="card justify-content-center text-center text-title">
+                
+                more...
+              </span>
             </div>
-            <div className="product-line-container">
-              <hr />
-                <h5>Cleaning and Household </h5>
-              <div className="product-line">
-
-                <span> more... </span>
-              </div>
+          </div>
+          <div className="product-line-container">
+            <hr />
+            <h5 className="text-title">Cleaning and Household </h5>
+            <div className="product-line">
+              <Hit items={items} />
+              <span className="card justify-content-center text-center text-title">
+                
+                more...
+              </span>
             </div>
+          </div>
         </div>
       </main>
       <div className="morespace"></div>

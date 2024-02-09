@@ -6,17 +6,24 @@ import Products from './routes/Products';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 import Search from './components/Search';
+import { AppProvider } from './AppContext';
+
+
+
 function App() {
+
   return (
     
     <BrowserRouter>
+    <AppProvider>
     <Navbar/>
     <Routes>
       <Route index element={<Home/>} />
       <Route path='products' element={<Products/>} />
       <Route path='search' element={<Search/>} />
     </Routes>
-    <Footer count="1"/>
+    <Footer />
+    </AppProvider>
     </BrowserRouter>
     
   );
