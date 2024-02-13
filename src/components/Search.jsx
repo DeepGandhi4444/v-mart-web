@@ -44,7 +44,7 @@ const Search = () => {
   return (
     <>
       <div className="flex">
-        <form action="/products" className="w-full" method="get">
+        <form action="/searchlist" className="w-full" method="get">
 
         <input
           type="text"

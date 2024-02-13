@@ -424,6 +424,60 @@ line-height: 20px;
  }
  
 
+/* testing */
+
+/* testing ends  */
+.product-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid darkgray;
+  border-radius: 8px;
+  margin: 6px;
+  padding: 5px;
+}
+
+.product-image img {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.product-details {
+  flex: 1;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #c71111;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.quantity-input {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+}
+
+
 /* impportant do not remove it  */
 .morespace {
   height: 65px;
