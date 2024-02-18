@@ -4,13 +4,22 @@
 # /db.js
 # /temp.json
 # dependencies
-/node_modules
+/client-Frontend/node_modules
+/server/node_modules
+/.sass-cache
+/.DS_Store
+/*.log
+*.swp
+npm-debug* .lock
+.idea
+.vscode
+.gitattributes
 /.pnp
 .pnp.js
 /src/.env
 # testing
 /coverage
-
+/graphql-tut
 # production
 /build
 
