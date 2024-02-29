@@ -12,6 +12,7 @@ const Search = () => {
   const [listdata, setListData] = useState([]);
   
   const { loading, error, data } = useQuery(getList);
+
   useEffect(() => {
     setListData(data ? data.getProducts : []);
     if (listdata.length > 0 && searchTerm !== "") {
@@ -33,6 +34,10 @@ const Search = () => {
     setSearchTerm(event.target.value);
   };
 
+  const handleSuggestionSubmit =(event)=>{
+    setSearchTerm("");
+  }
+  
   if (loading) {
     return <p> Loading . . .</p>;
   } else if (error) {
@@ -60,7 +65,7 @@ const Search = () => {
                 <i class="fa-solid fa-magnifying-glass"></i>
               </div>
               <Link to="/products">
-                <div className={`ml-5 h-10 pt-1.5 `}>{result.item.name}</div>
+                <div className={`ml-5 h-10 pt-1.5 `} onClick={handleSuggestionSubmit}>{result.item.name}</div>
               </Link>
             </div>
           ))}

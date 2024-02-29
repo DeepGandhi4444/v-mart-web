@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 const Hit = ({ items }) => {
 
+
+
   return (
     <>
       {items.map((item, index) => (
@@ -18,7 +20,7 @@ const Hit = ({ items }) => {
           </Link>
           <div className="card-info">
           <Link to="/products">
-            <p className="text-title">{item.name}</p>
+            <p className="text-title">{item.name.split(" ").length <= 2 ? item.name : `${item.name.split(" ")[0]+" "+item.name.split(" ")[1]}...`}</p>
             </Link>
             <p className="text-body">Min. Quantity - 2 pc.</p>
           </div>

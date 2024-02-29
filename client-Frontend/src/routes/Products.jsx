@@ -1,9 +1,9 @@
 import React from "react";
-
+import { useQuery } from "@apollo/react-hooks";
 import Hit from "../components/Hit";
+import { getList } from "../queries";
 
-
-var items = [
+var temp = [
   {
     name: "apple",
     synonyms: ["fruit", "red fruit", "edible fruit"],
@@ -32,6 +32,16 @@ var items = [
 
 const Products = () => {
   
+  const { loading, error, data } = useQuery(getList);
+
+  const items = error ? temp : data.getProducts;
+    
+  if (loading) {
+    return <p> Loading . . .</p>;
+  } else if (error) {
+    return <p>Error! Try again . . .</p>;
+  } else {
+
   return (
     <>
       <main>
@@ -108,5 +118,6 @@ const Products = () => {
       <div className="morespace"></div>
     </>
   );
+          }
 };
 export default Products;

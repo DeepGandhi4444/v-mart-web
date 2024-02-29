@@ -1,9 +1,10 @@
-import React from "react";
-// import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
 import CustomSlider from "../components/Slider";
 import Hit from "../components/Hit";
+import { getList } from "../queries";
+import { useQuery } from "@apollo/client";
 
-var temp = [
+var items = [
   {
     name: "apple",
     synonyms: ["fruit", "red fruit", "edible fruit"],
@@ -54,49 +55,61 @@ var sliderItems = [
 ];
 
 const Home = () => {
-  return (
-    <>
-      {/* <Navbar/> */}
-      <CustomSlider items={sliderItems} />
 
-      <h4
-        className="text-center"
-        style={{
-          borderTop: "1px solid grey",
-          paddingTop: "10px",
-          marginTop: "20px",
-          paddingBottom: "0px",
-        }}
-      >
-        Category
-      </h4>
-      <div className="textbar mt-1"></div>
-      <div className="category">
-        <div className="product-line">
-          <Hit items={temp} />
-        </div>
-      </div>
-      <h4
-        className="text-center"
-        style={{
-          borderTop: "1px solid grey",
-          paddingTop: "10px",
-          marginBottom: "0px",
-          paddingBottom: "0px",
-        }}
-      >
-        Best Seller
-      </h4>
-      <div className="textbar mt-1"></div>
-      <div className="category bestseller">
-        <div className="product-line">
-          <Hit items={temp} />
-        </div>
-      </div>
 
-      <div className="morespace"></div>
-    </>
-  );
+// const { loading, error, data } = useQuery(getList);
+ 
+//   const items = data ? data : [];
+ 
+  // if (loading) {
+  //   return <p> Loading . . .</p>;
+  // } else if (error) {
+  //   return <p>Error! Try again . . .</p>;
+  // } else {
+    return (
+      <>
+        {/* <Navbar/> */}
+        <CustomSlider items={sliderItems} />
+
+        <h4
+          className="text-center"
+          style={{
+            borderTop: "1px solid grey",
+            paddingTop: "10px",
+            marginTop: "20px",
+            paddingBottom: "0px",
+          }}
+        >
+          Category
+        </h4>
+        <div className="textbar mt-1"></div>
+        <div className="category">
+          <div className="product-line">
+            <Hit items={items} />
+          </div>
+        </div>
+        <h4
+          className="text-center"
+          style={{
+            borderTop: "1px solid grey",
+            paddingTop: "10px",
+            marginBottom: "0px",
+            paddingBottom: "0px",
+          }}
+        >
+          Best Seller
+        </h4>
+        <div className="textbar mt-1"></div>
+        <div className="category bestseller">
+          <div className="product-line">
+            <Hit items={items} />
+          </div>
+        </div>
+
+        <div className="morespace"></div>
+      </>
+    );
+  // }
 };
 
 export default Home;
