@@ -1,12 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useGlobalData } from "../AppContext";
 
 const Hit = ({ items }) => {
-  const {basketcount, setBasketcount} = useGlobalData();
-  function addproduct(){
-    setBasketcount( basketcount +1 );
-  }
+
   return (
     <>
       {items.map((item, index) => (

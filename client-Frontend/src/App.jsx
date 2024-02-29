@@ -1,22 +1,23 @@
-// import logo from './logo.svg';
+
 import './App.css';
 import Home from './routes/Home';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Products from './routes/Products';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
-// import Search from './components/Search';
-import { AppProvider } from './AppContext';
 import SearchList from './routes/SearchList';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-
-
+const client = new ApolloClient({
+  uri: 'http://localhost:5000/graphql',
+  cache: new InMemoryCache()
+});
 function App() {
 
   return (
     
     <BrowserRouter>
-    <AppProvider>
+    <ApolloProvider client={client}>
     <Navbar/>
     <Routes>
       <Route index element={<Home/>} />
@@ -24,7 +25,7 @@ function App() {
       <Route path='searchlist' element={<SearchList/>} />
     </Routes>
     <Footer />
-    </AppProvider>
+    </ApolloProvider>
     </BrowserRouter>
     
   );

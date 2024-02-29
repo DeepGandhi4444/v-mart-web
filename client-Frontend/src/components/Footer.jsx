@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useGlobalData } from "../AppContext";
+// import { useGlobalData } from "../AppContext";
 function Footer() {
-  const {basketcount} = useGlobalData();
+  // const {basketcount} = useGlobalData();
+  var basketcount = 56
   return (
     <div className="Customfooter">
       <div className="first">
