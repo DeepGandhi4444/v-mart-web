@@ -3,38 +3,38 @@ import { useQuery } from "@apollo/react-hooks";
 import Hit from "../components/Hit";
 import { getList } from "../queries";
 
-var temp = [
-  {
-    name: "apple",
-    synonyms: ["fruit", "red fruit", "edible fruit"],
-  },
-  {
-    name: "banana",
-    synonyms: ["yellow fruit", "tropical fruit", "curved fruit"],
-  },
-  {
-    name: "bread",
-    synonyms: ["loaf", "sliced bread", "baked goods"],
-  },
-  {
-    name: "milk",
-    synonyms: ["dairy", "fresh milk", "cow's milk"],
-  },
-  {
-    name: "eggs",
-    synonyms: ["chicken eggs", "white eggs", "protein"],
-  },
-  {
-    name: "rice",
-    synonyms: ["grains", "white rice", "staple"],
-  },
-];
+// var temp = [
+//   {
+//     name: "apple",
+//     synonyms: ["fruit", "red fruit", "edible fruit"],
+//   },
+//   {
+//     name: "banana",
+//     synonyms: ["yellow fruit", "tropical fruit", "curved fruit"],
+//   },
+//   {
+//     name: "bread",
+//     synonyms: ["loaf", "sliced bread", "baked goods"],
+//   },
+//   {
+//     name: "milk",
+//     synonyms: ["dairy", "fresh milk", "cow's milk"],
+//   },
+//   {
+//     name: "eggs",
+//     synonyms: ["chicken eggs", "white eggs", "protein"],
+//   },
+//   {
+//     name: "rice",
+//     synonyms: ["grains", "white rice", "staple"],
+//   },
+// ];
 
 const Products = () => {
   
   const { loading, error, data } = useQuery(getList);
 
-  const items = error ? temp : data.getProducts;
+  const items = data ? data.getProducts : [];
     
   if (loading) {
     return <p> Loading . . .</p>;

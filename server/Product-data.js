@@ -1,4 +1,4 @@
-exports.DATA = [
+exports.ProductData = [
       {
         "id": "123456",
         "name": "Brown Rice",

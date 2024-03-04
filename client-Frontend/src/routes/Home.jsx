@@ -57,15 +57,15 @@ var sliderItems = [
 const Home = () => {
 
 
-// const { loading, error, data } = useQuery(getList);
+const { loading, error, data } = useQuery(getList);
  
-//   const items = data ? data : [];
- 
-  // if (loading) {
-  //   return <p> Loading . . .</p>;
-  // } else if (error) {
-  //   return <p>Error! Try again . . .</p>;
-  // } else {
+  const items = data ? data.getProducts : [];
+
+  if (loading) {
+    return <p> Loading . . .</p>;
+  } else if (error) {
+    return <p>Error! Try again . . .</p>;
+  } else {
     return (
       <>
         {/* <Navbar/> */}
@@ -109,7 +109,7 @@ const Home = () => {
         <div className="morespace"></div>
       </>
     );
-  // }
+  }
 };
 
 export default Home;
