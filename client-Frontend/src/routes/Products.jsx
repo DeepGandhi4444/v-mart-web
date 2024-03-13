@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import Hit from "../components/Hit";
 import { getList } from "../queries";
-
+import Navbar from "../components/Navbar";
 // var temp = [
 //   {
 //     name: "apple",
@@ -44,6 +44,8 @@ const Products = () => {
 
   return (
     <>
+    <Navbar/>
+    <div className="upperspace"></div>
       <main>
         <div>
           <h3

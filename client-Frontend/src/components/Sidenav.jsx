@@ -26,7 +26,7 @@ const Sidebar = ({ isSidebarOpen, setSidebarOpen }) => {
               <Link to="/"><i class="fa-solid fa-house"></i>  Home</Link>
             </li>
             <li>
-              <Link to="/"><i class="fa-solid fa-user"></i>  My Account</Link>
+              <Link to="/user"><i class="fa-solid fa-user"></i>  My Account</Link>
             </li>
             <li>
               <Link to="/"><i class="fa-solid fa-bars"></i>  Category</Link>

@@ -3,14 +3,16 @@ import './App.css';
 import Home from './routes/Home';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Products from './routes/Products';
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 import SearchList from './routes/SearchList';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-
-const client = new ApolloClient({
+// import fetch from  'isomorphic-fetch';
+import User from './routes/User';
+export const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
+  // fetch: fetch
 });
 function App() {
 
@@ -18,11 +20,12 @@ function App() {
     
     <BrowserRouter>
     <ApolloProvider client={client}>
-    <Navbar/>
+    {/* <Navbar/> */}
     <Routes>
       <Route index element={<Home/>} />
       <Route path='products' element={<Products/>} />
       <Route path='searchlist' element={<SearchList/>} />
+      <Route path='user' element={<User/>}/>
     </Routes>
     <Footer />
     </ApolloProvider>

@@ -1,35 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+// import { useEffect, useState } from "react";
 import CustomSlider from "../components/Slider";
 import Hit from "../components/Hit";
 import { getList } from "../queries";
 import { useQuery } from "@apollo/client";
-
-var items = [
-  {
-    name: "apple",
-    synonyms: ["fruit", "red fruit", "edible fruit"],
-  },
-  {
-    name: "banana",
-    synonyms: ["yellow fruit", "tropical fruit", "curved fruit"],
-  },
-  {
-    name: "bread",
-    synonyms: ["loaf", "sliced bread", "baked goods"],
-  },
-  {
-    name: "milk",
-    synonyms: ["dairy", "fresh milk", "cow's milk"],
-  },
-  {
-    name: "eggs",
-    synonyms: ["chicken eggs", "white eggs", "protein"],
-  },
-  {
-    name: "rice",
-    synonyms: ["grains", "white rice", "staple"],
-  },
-];
+import Navbar from "../components/Navbar";
 var sliderItems = [
   {
     id: 1,
@@ -68,13 +43,13 @@ const { loading, error, data } = useQuery(getList);
   } else {
     return (
       <>
-        {/* <Navbar/> */}
+        <Navbar/>
+        <div className="upperspace"></div>
         <CustomSlider items={sliderItems} />
 
         <h4
-          className="text-center"
+          className="text-center text-title"
           style={{
-            borderTop: "1px solid grey",
             paddingTop: "10px",
             marginTop: "20px",
             paddingBottom: "0px",
@@ -89,9 +64,9 @@ const { loading, error, data } = useQuery(getList);
           </div>
         </div>
         <h4
-          className="text-center"
+          className="text-center text-title"
           style={{
-            borderTop: "1px solid grey",
+           
             paddingTop: "10px",
             marginBottom: "0px",
             paddingBottom: "0px",
