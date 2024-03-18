@@ -10,7 +10,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 // import fetch from  'isomorphic-fetch';
 import User from './routes/User';
 export const client = new ApolloClient({
-  uri: 'http://v-mart-web-server:5000/graphql',
+  uri: 'https://v-mart-web-server:5000/graphql',
   cache: new InMemoryCache(),
   // fetch: fetch
 });
