@@ -1660,20 +1660,20 @@
   dependencies:
     tslib "^2.5.0"
 
-"@esbuild/win32-x64@0.17.19":
+"@esbuild/linux-x64@0.17.19":
   version "0.17.19"
-  resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.17.19.tgz"
-  integrity sha512-lAhycmKnVOuRYNtRtatQR1LPQf2oYCkRGkSFnseDAKPl8lu5SOsK/e1sXe5a0Pc5kHIHe6P2I/ilntNv2xf3cA==
+  resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.17.19.tgz"
+  integrity sha512-68ngA9lg2H6zkZcyp22tsVt38mlhWde8l3eJLWkyLrp4HwMUr3c1s/M2t7+kHIhvMjglIBrFpncX1SzMckomGw==
 
-"@esbuild/win32-x64@0.18.20":
+"@esbuild/linux-x64@0.18.20":
   version "0.18.20"
-  resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.18.20.tgz"
-  integrity sha512-kTdfRcSiDfQca/y9QIkng02avJ+NCaQvrMejlsB3RRv5sE9rRoeBPISaZpKxHELzRxZyLvNts1P27W3wV+8geQ==
+  resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.18.20.tgz"
+  integrity sha512-UYqiqemphJcNsFEskc73jQ7B9jgwjWrSayxawS6UVFZGWrAAtkzjxSqnoclCXxWtfwLdzU+vTpcNYhpn43uP1w==
 
-"@esbuild/win32-x64@0.19.12":
+"@esbuild/linux-x64@0.19.12":
   version "0.19.12"
-  resolved "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.19.12.tgz"
-  integrity sha512-T1QyPSDCyMXaO3pzBkF96E8xMkiRYbUEZADd29SyPGabqxMViNoii+NcK7eWJAEoU6RZyEm5lVSIjTmcdoB9HA==
+  resolved "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.19.12.tgz"
+  integrity sha512-B71g1QpxfwBvNrfyJdVDexenDIt1CiDN1TIXLbhOw0KhJzE78KIFGX6OJ9MrtC0oOqMWf+0xop4qEU8JrJTwCg==
 
 "@escape.tech/graphql-armor-block-field-suggestions@^2.1.0":
   version "2.1.0"
@@ -2566,10 +2566,15 @@
   resolved "https://registry.npmjs.org/@next/env/-/env-14.1.0.tgz"
   integrity sha512-Py8zIo+02ht82brwwhTg36iogzFqGLPXlRGKQw5s+qP/kMNc4MAyDeEwBKDijk6zTIbegEgu8Qy7C1LboslQAw==
 
-"@next/swc-win32-x64-msvc@14.1.0":
+"@next/swc-linux-x64-gnu@14.1.0":
   version "14.1.0"
-  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.1.0.tgz"
-  integrity sha512-9WEbVRRAqJ3YFVqEZIxUqkiO8l1nool1LmNxygr5HWF8AcSYsEpneUDhmjUVJEzO2A04+oPtZdombzzPPkTtgg==
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-14.1.0.tgz"
+  integrity sha512-zJ2pnoFYB1F4vmEVlb/eSe+VH679zT1VdXlZKX+pE66grOgjmKJHKacf82g/sWE4MQ4Rk2FMBCRnX+l6/TVYzQ==
+
+"@next/swc-linux-x64-musl@14.1.0":
+  version "14.1.0"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-14.1.0.tgz"
+  integrity sha512-rbaIYFt2X9YZBSbH/CwGAjbBG2/MrACCVu2X0+kSykHzHnYH5FjHxwXLkcoJ10cX0aWCEynpu+rP76x0914atg==
 
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
@@ -2599,10 +2604,15 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@parcel/watcher-win32-x64@2.4.0":
+"@parcel/watcher-linux-x64-glibc@2.4.0":
   version "2.4.0"
-  resolved "https://registry.npmjs.org/@parcel/watcher-win32-x64/-/watcher-win32-x64-2.4.0.tgz"
-  integrity sha512-pAUyUVjfFjWaf/pShmJpJmNxZhbMvJASUpdes9jL6bTEJ+gDxPRSpXTIemNyNsb9AtbiGXs9XduP1reThmd+dA==
+  resolved "https://registry.npmjs.org/@parcel/watcher-linux-x64-glibc/-/watcher-linux-x64-glibc-2.4.0.tgz"
+  integrity sha512-KphV8awJmxU3q52JQvJot0QMu07CIyEjV+2Tb2ZtbucEgqyRcxOBDMsqp1JNq5nuDXtcCC0uHQICeiEz38dPBQ==
+
+"@parcel/watcher-linux-x64-musl@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/@parcel/watcher-linux-x64-musl/-/watcher-linux-x64-musl-2.4.0.tgz"
+  integrity sha512-7jzcOonpXNWcSijPpKD5IbC6xC7yTibjJw9jviVzZostYLGxbz8LDJLUnLzLzhASPlPGgpeKLtFUMjAAzM+gSA==
 
 "@parcel/watcher@^2.1.0", "@parcel/watcher@^2.4.0":
   version "2.4.0"
@@ -2836,10 +2846,15 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
-"@rollup/rollup-win32-x64-msvc@4.9.6":
+"@rollup/rollup-linux-x64-gnu@4.9.6":
   version "4.9.6"
-  resolved "https://registry.npmjs.org/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.9.6.tgz"
-  integrity sha512-jqzNLhNDvIZOrt69Ce4UjGRpXJBzhUBzawMwnaDAwyHriki3XollsewxWzOzz+4yOFDkuJHtTsZFwMxhYJWmLQ==
+  resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-gnu/-/rollup-linux-x64-gnu-4.9.6.tgz"
+  integrity sha512-HUNqM32dGzfBKuaDUBqFB7tP6VMN74eLZ33Q9Y1TBqRDn+qDonkAUyKWwF9BR9unV7QUzffLnz9GrnKvMqC/fw==
+
+"@rollup/rollup-linux-x64-musl@4.9.6":
+  version "4.9.6"
+  resolved "https://registry.npmjs.org/@rollup/rollup-linux-x64-musl/-/rollup-linux-x64-musl-4.9.6.tgz"
+  integrity sha512-ch7M+9Tr5R4FK40FHQk8VnML0Szi2KRujUgHXd/HjuH9ifH72GUmw6lStZBo3c3GB82vHa0ZoUfjfcM7JiiMrQ==
 
 "@rushstack/eslint-patch@^1.1.0":
   version "1.6.1"
