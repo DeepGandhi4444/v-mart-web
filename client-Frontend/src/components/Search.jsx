@@ -9,14 +9,13 @@ import { getList } from "../queries.js";
 const Search = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const [listdata, setListData] = useState([]);
-  
+
   const { loading, error, data } = useQuery(getList);
 
   useEffect(() => {
-    setListData(data ? data.getProducts : []);
-    if (listdata.length > 0 && searchTerm !== "") {
-      const fuse = new Fuse(listdata, {
+
+    if (data && data.getProducts && data.getProducts.length  > 0 && searchTerm !== "") {
+      const fuse = new Fuse(data.getProducts, {
         keys: ["name", "synonyms"],
       });
       const results = fuse.search(searchTerm);
@@ -28,7 +27,7 @@ const Search = () => {
 
 
 
-  }, [searchTerm, data]);
+  }, [searchTerm, data ,data.getProducts]);
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
